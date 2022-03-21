@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html  dir="rtl" lang="ar">
+<head>
+    <meta name="viewport" content="width=device-width, initial=1">
+    <link type="text/css" rel="stylesheet" href="template8.css">
+    <title>My Start Up</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> <!-- nav font -->
+
+    <script>
+        $(document).ready(function(){
+            $('.definition').fadeIn(800);
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 60){
+                    $('.nav-table-hidden').slideDown(300);
+                }else{
+                    $('.nav-table-hidden').hide();
+                }
+            });
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 420){
+                    $('.des').animate({
+                        opacity: '1'
+                    },700);
+                }
+                if ($(this).scrollTop() > 883){
+                    $('.services-box').animate({
+                        opacity: '1'
+                    },700);
+                }
+                console.log($(this).scrollTop());
+            });
+            var width = $(window).width();
+            var height = $(window).height();
+            $('.features .f-items-ul li').css({
+                'width': (width*30)/100,
+                'height': (height*65)/100
+            });
+
+            $('.features .f-items-ul li').mouseleave(function(){
+                $(this).children('div').fadeOut(800);
+                console.log('mouse leave');
+            });
+            $('.features .f-items-ul li').mouseenter(function(){
+                $(this).children('.hovering').fadeIn(800);
+                console.log('mouse entered');
+            });
+        });
+
+    </script>
+</head>
+<nav>
+    <table class="nav-table">
+        <tr>
+            <td>
+                <img src="logo.png" width="300px">
+            </td>
+            <td>
+                <ul>
+                    <li>home</li>
+                    <li>services</li>
+                    <li>portfolio</li>
+                    <li>blog</li>
+                    <li>about us</li>
+                    <li>contact us</li>
+                </ul>
+            </td>
+            <td>
+                <h3>say hello</h3>
+            </td>
+        </tr>
+    </table>
+    <table class="nav-table-hidden">
+        <tr>
+            <td>
+                <img src="logo.png" width="300px">
+            </td>
+            <td>
+                <ul>
+                    <li>home</li>
+                    <li>services</li>
+                    <li>portfolio</li>
+                    <li>blog</li>
+                    <li>about us</li>
+                    <li>contact us</li>
+                </ul>
+            </td>
+            <td>
+                <h3>say hello</h3>
+            </td>
+        </tr>
+    </table>
+    <div class="definition">
+        Startup you can build a <br>website online using the <br>Bootstrap builder
+    </div>
+    <div class="visit-btn">
+        <input type="hidden">visit our works
+    </div>
+</nav>
+<body>
+<section class="services">
+    <h6>services</h6>
+    <div class="des">
+        <p>
+            With more than 20 years of <br>experience we can deliver the <br>the bes product design
+        </p>
+    </div>
+    <div class="services-box">
+        <ul>
+            <li>
+                <img src="phone.png" width="40px">
+                <h4>Mobile app</h4>
+                <p>
+                    Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit sed do<br> eiusmod tempor.
+                </p>
+            </li>
+            <li>
+                <img src="design.png" width="50px">
+                <h4>Graphic design</h4>
+                <p>
+                    Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit sed do<br> eiusmod tempor.
+                </p>
+            </li>
+            <li>
+                <img src="paint.png" width="50px">
+                <h4>Web design</h4>
+                <p>
+                    Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit sed do<br> eiusmod tempor.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<br>
+<section class="features">
+    <div class="f-des">
+        <h2>featured works</h2>
+        <p>
+            Tour function information without cross action media value quickly maximize timely deliverables
+        </p>
+    </div>
+    <div class="f-items">
+        <ul class="f-items-ul">
+            <li class="item1">
+                <div class="hovering">
+                    <p>Mobile app</p>
+                    <h3>Colorlib Game App</h3>
+                    <div class="btn">View</div>
+                </div>
+            </li>
+            <li class="item2">
+                <div class="hovering">
+                    <p>Mobile app</p>
+                    <h3>Colorlib Game App</h3>
+                    <div class="btn">View</div>
+                </div>
+            </li>
+            <li class="item3">
+                <div class="hovering">
+                    <p>Mobile app</p>
+                    <h3>Colorlib Game App</h3>
+                    <div class="btn">View</div>
+                </div>
+            </li>
+            <li class="item4">
+                <div class="hovering">
+                    <p>Mobile app</p>
+                    <h3>Colorlib Game App</h3>
+                    <div class="btn">View</div>
+                </div>
+
+            </li>
+
+
+        </ul>
+    </div>
+</section>
+</body>
+</html>
